@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Feb 15 10:41:40 2025
+# Process ID: 44446
+# Current directory: /home/rahul24/ICDesign/scripting-and-automation1/Automation/Project_1.runs/synth_1
+# Command line: vivado -log top_Wallace_Multiplier.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_Wallace_Multiplier.tcl
+# Log file: /home/rahul24/ICDesign/scripting-and-automation1/Automation/Project_1.runs/synth_1/top_Wallace_Multiplier.vds
+# Journal file: /home/rahul24/ICDesign/scripting-and-automation1/Automation/Project_1.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source top_Wallace_Multiplier.tcl -notrace
