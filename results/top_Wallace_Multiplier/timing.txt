@@ -1,0 +1,44 @@
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Sat Feb 15 10:59:40 2025
+| Host         : vlsi.iitgn.ac.in running 64-bit CentOS Linux release 7.4.1708 (Core)
+| Command      : report_timing
+| Design       : top_Wallace_Multiplier
+| Device       : 7a200t-fbg676
+| Speed File   : -2  PRODUCTION 1.22 2018-03-21
+--------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 Y[0]
+                            (input port)
+  Destination:            Product[7]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.086ns  (logic 3.685ns (52.006%)  route 3.401ns (47.994%))
+  Logic Levels:           4  (IBUF=1 LUT4=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    R25                                               0.000     0.000 r  Y[0] (IN)
+                         net (fo=0)                   0.000     0.000    Y[0]
+    R25                  IBUF (Prop_ibuf_I_O)         0.913     0.913 r  Y_IBUF[0]_inst/O
+                         net (fo=20, routed)          1.470     2.383    Y_IBUF[0]
+    SLICE_X0Y107         LUT6 (Prop_lut6_I1_O)        0.105     2.488 r  Product_OBUF[7]_inst_i_3/O
+                         net (fo=1, routed)           0.554     3.042    Product_OBUF[7]_inst_i_3_n_0
+    SLICE_X0Y107         LUT4 (Prop_lut4_I2_O)        0.119     3.161 r  Product_OBUF[7]_inst_i_1/O
+                         net (fo=1, routed)           1.376     4.537    Product_OBUF[7]
+    T25                  OBUF (Prop_obuf_I_O)         2.548     7.086 r  Product_OBUF[7]_inst/O
+                         net (fo=0)                   0.000     7.086    Product[7]
+    T25                                                               r  Product[7] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+

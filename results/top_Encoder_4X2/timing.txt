@@ -1,0 +1,42 @@
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Sat Feb 15 09:25:12 2025
+| Host         : vlsi.iitgn.ac.in running 64-bit CentOS Linux release 7.4.1708 (Core)
+| Command      : report_timing
+| Design       : top_Encoder_4X2
+| Device       : 7a200t-fbg676
+| Speed File   : -2  PRODUCTION 1.22 2018-03-21
+--------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 I1[3]
+                            (input port)
+  Destination:            Y[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.985ns  (logic 3.571ns (59.669%)  route 2.414ns (40.331%))
+  Logic Levels:           3  (IBUF=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    T23                                               0.000     0.000 r  I1[3] (IN)
+                         net (fo=0)                   0.000     0.000    I1[3]
+    T23                  IBUF (Prop_ibuf_I_O)         0.908     0.908 r  I1_IBUF[3]_inst/O
+                         net (fo=2, routed)           0.937     1.845    I1_IBUF[3]
+    SLICE_X0Y101         LUT3 (Prop_lut3_I0_O)        0.126     1.971 r  Y_OBUF[0]_inst_i_1/O
+                         net (fo=1, routed)           1.477     3.448    Y_OBUF[0]
+    R22                  OBUF (Prop_obuf_I_O)         2.537     5.985 r  Y_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     5.985    Y[0]
+    R22                                                               r  Y[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
