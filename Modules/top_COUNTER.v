@@ -24,7 +24,7 @@
 
 
 
-module top_counter(count, clk, reset);
+module top_COUNTER(count, clk, reset);
 
 input wire clk;
 input wire reset;
@@ -38,7 +38,4 @@ output reg [3:0] count;
     end
 
 endmodule
-module COUNTER(
 
-    );
-endmodule
