@@ -1,4 +1,4 @@
-,top_comparator,top_Brent_Kung,top_COUNTER,top_Encoder_4X2,top_Mealy_machine,top_sequence_detector_10011,top_shift_register,top_sorter,top_Wallace_Multiplier
-Power,1.253,23.002,23.002,0.659,0.164,0.239,3.291,16.987,3.787
-Delay,7.232,23.524,23.524,5.985,4.146,5.865,4.434,14.478,7.086
-LUTs,12.0,63.0,63.0,1.0,7.0,4.0,10.0,78.0,21.0
+,top_Brent_Kung,top_comparator,top_COUNTER,top_Encoder_4X2,top_Mealy_machine,top_sequence_detector_10011,top_shift_register,top_sorter,top_Wallace_Multiplier
+Power,22.976,1.245,3.814,0.659,0.165,0.236,3.295,16.932,3.788
+Delay,19.21,7.149,4.378,5.896,4.143,5.807,4.546,13.971,7.203
+LUTs,62.0,12.0,2.0,1.0,5.0,2.0,10.0,78.0,21.0
