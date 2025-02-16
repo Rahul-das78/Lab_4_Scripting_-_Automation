@@ -39,12 +39,11 @@ for filename in models:
         
         print("{} reported".format(filename))
 
-    except:
+    except Exception:
         print(filename+ " is not Synthesizable")
         # Delete the folder if it exists
         if os.path.exists(folder_path):
             shutil.rmtree(folder_path)
-	continue
 		
 data_files = os.listdir("results")  
 print(data_files)
@@ -57,33 +56,32 @@ Power = []
 Delay = []
 LUTs = []
 for data in data_files :
-    for file in file_types: 
-		with open("results/{}/{}".format(data,file),'r') as File:
+    for file in file_types:
+        try:
+            with open("results/{}/{}".format(data,file),'r') as File:
              		content = File.read()
-
-        	words = content.split('\n')   
-
-        	for req_word in words:
+            words = content.split('\n')
+            for req_word in words:
             		if file_types[0] in file:
                 		if req_data[0] in req_word:
                     			pwr = float(req_word.split()[6])
                     			print(pwr)
                     			Power.append(pwr)
-  
-
-        	for req_word in words:
+            for req_word in words:
             		if file_types[1] in file:
                 		if req_data[1] in req_word:
                     			delay = float(req_word.split()[3][:-2])
                     			print(delay)
                     			Delay.append(delay)
- 		for req_word in words:
+            for req_word in words:
             		if file_types[2] in file:
                 		if req_data[2] in req_word:
                     			luts = float(req_word.split()[4])
                     			print(luts) 
                     			LUTs.append(luts) 
                     			print("_____") 
+        except Exception:
+            pass
 
 
 Final_results = [Power,Delay,LUTs]
